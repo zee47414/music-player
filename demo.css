@@ -1,0 +1,139 @@
+body{
+    background-color: #183153;
+    box-sizing: border-box;
+}
+main{
+    width: 60%;
+}
+/* navigation or header */
+header{
+    width: 100%;
+    margin-bottom: 10%;
+    display: flex; 
+    position: fixed;
+    box-sizing: border-box;
+    background-image: linear-gradient(to top,#183153,black);
+    box-shadow: -3px -3px 4px 4px #183153;
+    z-index: 10;
+}
+.music-player-logo{
+    background-color: green;
+    border-radius: 50%;
+    box-shadow: 0px 0px 5px 5px green; 
+}
+.title{
+    position: fixed;
+    top: 8%;
+    left:8%; 
+}
+.title-1{
+    font-family: sans-serif;
+    color: whitesmoke;
+    font-weight: 700;
+}
+.title-2{
+    font-family: sans-serif;
+    color: whitesmoke;
+    font-weight: 700;
+}
+.header-text{
+    position: fixed;
+    left: 20%;
+    top: 10%;
+    font-family: sans-serif;
+    color: whitesmoke;
+    font-weight: 700;
+}
+.search-bar input{
+    position: relative;
+    text-align: center;
+    background-color: #183153;
+    border-color: white;
+    border-radius: 25px;
+    width: 350px;
+    height: 30px;
+    right: -200%;
+    top: 18%;
+}
+.search-ico{
+    position: fixed;
+    top: 4.8%;
+    left: 53.5%;
+}
+.microphone-ico{
+ position: fixed;
+ top: 4.8%;
+ left: 73%;
+}
+.notification-bell{
+    position: absolute;
+    top: 14%;
+    left: 87%;
+    color:whitesmoke;
+}
+.user{
+ width: 50px;
+ height: 50px;
+ border-radius: 50%;
+ position: absolute;
+ top: 13%;
+ right: 5%;
+}
+
+/*to style title container where title image will going to present */
+.title-section-playlist{
+    display: inline-block;
+}
+.container-title {
+    box-sizing: border-box;
+    background-color: rgb(13, 13, 38);
+    width: 60%;
+display: flex;
+flex-direction: row;
+position: absolute;
+top: 15%;
+left: 5%;
+}
+.title-image{
+   margin-right: 50px;
+}
+
+.title-image img{
+    width: 300px;
+    height: 310px;
+
+}
+.title-image-description ,h2,h6,p {
+   color: whitesmoke;
+}
+#followers-count{
+    position: relative;
+    left: 50%;
+    top:-22%;
+}
+/* similiar artist */
+.similiar-artist{
+    display: inline-block;
+    width: 40%;
+    position: absolute;
+    left: 70%;
+    top: 12%;
+}  
+.similiar-artist-header h2{
+    color: whitesmoke;
+}
+.similiar-artist-header span{
+position: absolute;
+left: 40%;
+top: 13%;
+color: whitesmoke;
+}
+.similiar-artist-list{
+    list-style: none;
+}
+.similiar-artist-list img{
+    width: 80px;
+    height:80px;
+}
+.band-nam
+}

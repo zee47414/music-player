@@ -1,0 +1,423 @@
+body{
+    background-color: #183153;
+}
+/* navigation or header */
+header{
+    width: 100%;
+    /* background-color: aqua; */
+    display: flex; 
+    position: fixed;
+    box-sizing: border-box;
+    background-image: linear-gradient(to top,#183153,black);
+    box-shadow: -3px -3px 4px 4px #183153;
+    z-index: 10;
+}
+.music-player-logo{
+    background-color: green;
+    border-radius: 50%;
+    box-shadow: 0px 0px 5px 5px green; 
+}
+.title{
+    position: fixed;
+    top: 8%;
+    left:8%; 
+}
+.title-1{
+    font-family: sans-serif;
+    color: whitesmoke;
+    font-weight: 700;
+}
+.title-2{
+    font-family: sans-serif;
+    color: whitesmoke;
+    font-weight: 700;
+}
+.header-text{
+    position: fixed;
+    left: 20%;
+    top: 10%;
+    font-family: sans-serif;
+    color: whitesmoke;
+    font-weight: 700;
+}
+.search-bar input{
+    position: relative;
+    text-align: center;
+    background-color: #183153;
+    border-color: white;
+    border-radius: 25px;
+    width: 350px;
+    height: 30px;
+    right: -200%;
+    top: 18%;
+}
+.search-ico{
+    position: fixed;
+    top: 4.8%;
+    left: 53.5%;
+}
+.microphone-ico{
+ position: fixed;
+ top: 4.8%;
+ left: 74%;
+}
+.notification-bell{
+    position: absolute;
+    top: 14%;
+    left: 87%;
+    color:whitesmoke;
+}
+.user{
+ width: 50px;
+ height: 50px;
+ border-radius: 50%;
+ position: absolute;
+ top: 13%;
+ right: 5%;
+}
+/* start main */ 
+.container{
+    display: inline-block;
+    width: 70%;
+    height: auto;
+    margin-top: 5%;
+    margin-left: 5%;
+    margin-right: 0%;
+}
+/* first section  section-header*/
+
+.section-header{
+    margin-top: 10%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.section-header img{
+ width: 270px;
+ height: 200px;
+ transition: 0.5s ease-in-out;
+}
+.section-header img:hover{
+    transform: translate(20px,20px);
+    border-radius: 25px;
+    width: 300px;
+    height: 250px;
+}
+/* aside section */
+aside{
+    display: inline-block;
+    width:30%;
+    height: 75vh;
+}
+.queue{
+    position: fixed;   /* position is fixed to make the elements fixed on screen*/
+    top: 25%;
+    left: 75%;
+     overflow-y: scroll;/* overflow scroll to get the scrolling effect in the aside section */
+}
+.queue h4{
+    color: darkgrey;
+    position: fixed;
+    left: 78%;
+    top: 20%;
+    font-weight: 1000;
+}
+.queue-list {
+    list-style: none;
+   
+}
+
+#queue-favourites{
+    position: fixed;
+    left: 90%;
+    top: 20%;
+    color: greenyellow;
+    border: 0;
+    background-color: #183153;
+}
+.queue-list li img{
+width:50px;
+height: 50px;
+padding-bottom: 5px;
+box-shadow: 0 0 4px 4px #3b1723;
+}
+.album{
+    display: flex;
+    width:300px;
+    height: 100px;
+}
+.album span{
+    padding-top: 15px;
+    padding-right: 5px;
+}
+.album-singer{
+    padding-left: 5px;
+}
+.album-name{
+    color: darkgray;
+    font-weight: 600;
+}
+.singer{
+    color: darkgray;
+    font-size: small;
+}
+.album i{
+    position: absolute;
+    right: 30%;
+}
+/* latest release */
+.latest-release-div{
+display: flex;
+flex-wrap: wrap;
+margin-top: 10%;
+margin-bottom: -5%;
+}
+.images-container img{
+    width: 100px;
+    height: 100px;
+}
+
+.images-container{
+    display: flex;
+    flex-wrap: nowrap;
+    width: 450px;
+    height: 250px;
+    margin-top: -8%;
+    margin-bottom:-5% ;
+} 
+
+
+.latest-song{
+  position: relative;  /* position relative to make the song name horizontaly align to the images  and then make adjustment according to your viewport */
+  left: 45%;
+  top: -35%;
+}
+.menu-ico{
+    /* to position the date and menu icon parallel to the image use position as relative and adjust the left and top margins */
+    position: relative;
+    left: 90%;
+    top: -50%;    
+}
+/* dropdown menu */
+.hide{
+ opacity: 0;
+ z-index: 0;
+}
+/* set dropdown menu  */
+#dropdown-menu{
+    width: 250px;
+    height: 50px;
+}
+#dropdown:hover #dropdown-menu{
+    opacity: 1;
+    z-index: 2;
+}
+/* player to be visible when clicking on latest released song */
+#player{
+    width:0;
+    height:0;
+    overflow:hidden;
+    position:fixed;
+    bottom: 0%;
+    left:0;
+    transition:all 2s;
+}
+#player:target{
+    width: 100%;
+    margin-left: 0%;
+    height: 70px;
+    background-color: #282828;
+    position: fixed;
+    bottom: 0%;
+    display: flex;
+
+}
+
+.left-side-of-player{
+display: flex;
+margin: 15px;
+}
+.player-song{
+    padding-left:5px ;
+}
+.left-side-of-player .sg-name{
+    color: whitesmoke;
+    font-weight: 600;
+}
+.left-side-of-player .sn-name{
+    color: #1e1e1e;
+    font-weight: 600;
+    font-size: smaller;
+}
+.left-side-of-player img{
+    width: 50px;
+    height: 50px;
+}
+.left-side-of-player i{
+   position: absolute;
+   left: 11.5%;
+   color: black;
+}
+/* middle of the player */
+.middle-of-player{
+    display: flex;
+}
+.player-controls{
+ position: absolute;   
+ left: 40%;
+ top: 20%;
+}
+.player-controls i{
+    position: relative;
+    left: 17%;
+    padding-right: 10%;
+    color: black;
+}
+.player-controls input{
+    width: 300px;
+}
+.player-control-line span{
+    color: black;
+}
+/* right side of player,volume controls */
+.right-side-of-player{
+position: relative;
+left: 70%;
+top: 15%;
+}
+.right-side-of-player i{
+    color: black;
+}
+.right-side-of-player a{
+    text-decoration: none;
+    position: relative;
+    top: -2%;
+    left: 5%;
+}
+/* popular-artist */
+
+.popular-artist-list{
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+}
+.popular-artist-list li img{
+    margin-top: 10%;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    box-shadow: 0 0 5px 5px rgb(153, 195, 120);   
+}
+/* music list type */
+.types-music-container{
+    background-color: #2a2747;
+    height: 150px;
+    margin-top: 50px ;
+}
+.music-type-list{
+    list-style: none;
+    display: flex;
+    justify-content: space-between; 
+    margin: 0;
+    padding: 3% 0;  /* to center the image element verticle*/
+}
+.music-type-list li{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    color:whitesmoke ;
+    
+}
+#station{
+    background-image: url("music types/radio\ station.jpg");
+    background-size: cover;
+    text-align: center;
+}
+#chill{
+    background-image: url("music types/chill.jpg");
+    background-size: cover;
+    text-align: center;
+}
+#love{
+    background-image: url("music types/love.jpg");
+    background-size: cover;
+    text-align: center;
+}
+#pop{
+    background-image: url("music types/pop.jpg");
+    background-size: cover;
+    text-align: center;
+}
+#retro{
+    background-image: url("music types/retro\ music.jpg");
+    background-size: cover;
+    text-align: center;
+}
+#rock{
+    background-image: url("music types/rock.jpg");
+    background-size: cover;
+    text-align: center;
+}
+#workout{
+    background-image: url("music types/workout.jpg");
+    background-size: cover;
+    text-align: center;
+}
+/* section five  */
+.electronic-party-roadtrip{
+    width: 100%;
+    display: flex;
+    box-sizing: border-box;
+    margin: 5% 0; 
+    flex-direction: row;
+    justify-content: space-between;
+}
+.electronic-party-roadtrip div{
+/* to adjust the size of images  */
+    width: 300px;
+    height: 250px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+.electronic-party-roadtrip p{
+    font-weight: 1000;
+    font-size: x-large;
+    color: rgb(10, 28, 28);
+}
+.electronic-party-roadtrip .electronic-music{
+background-image: url("electronic-party/electronic.jpeg");
+background-size: cover;
+
+}
+.electronic-party-roadtrip .road-trip{
+    background-image: url("electronic-party/road-trip.jpeg");
+    background-size: cover;
+   
+}
+.electronic-party-roadtrip .party{
+    background-image: url("electronic-party/party.jpeg");
+    background-size: cover;
+    
+}
+.electronic-party-roadtrip div:hover{
+    /* to get an effect on hovering the image */
+    background-size:170%;
+   
+}
+/* sixth section */
+
+.latest-song-list{
+    /* this class name same as latest eglish section  */
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+}
+.latest-song-list li img{
+    height: 100px;
+    width: 100px;
+}
+.son-release-date p,div{
+    color: darkgray;
+}
